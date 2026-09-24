@@ -1,0 +1,36 @@
+* { box-sizing: border-box; font-family: sans-serif; text-align: center; }
+body { margin: 0; background: #f4f4f4; }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+.margin-layer {
+  background: #f1c40f;
+  outline: 2px dashed #333;
+  padding: 20px;
+}
+
+.border-layer {
+  background: #e67e22;
+  border: 10px solid #d35400;
+}
+
+.padding-layer {
+  background: #2ecc71;
+  padding: 20px;
+}
+
+.content-layer {
+  background: #3498db;
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.explain {
+  max-width: 500px;
+  margin: 0 auto 40px;
+}

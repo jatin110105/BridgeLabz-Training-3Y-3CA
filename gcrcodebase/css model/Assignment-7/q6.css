@@ -1,0 +1,28 @@
+* { box-sizing: border-box; font-family: sans-serif; text-align: center; }
+body { margin: 0; background: #f4f4f4; }
+header { padding: 1rem; }
+
+.transform-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #3498db;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+}
+
+.rotate-box:hover    { transform: rotate(45deg); }
+.scale-box:hover     { transform: scale(1.4); }
+.translate-box:hover { transform: translate(20px, -20px); }
+.skew-box:hover       { transform: skew(20deg, 10deg); }
