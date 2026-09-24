@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #eae5ff;
+            padding: 40px;
+        }
+
+       
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 230px);
+            gap: 30px;
+            justify-content: center;
+        }
+
+
+       
+
+        .movie-card {
+            width: 230px;
+            border: 1px solid #00000014;
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+
+            animation: cardAppear 0.6s ease forwards;
+            opacity: 0;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+
+
+        .movie-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+
+        @keyframes cardAppear {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        .movie-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .movie-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .movie-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .movie-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .movie-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .movie-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+
+
+        .movie-image {
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+
+        .movie-card:hover .movie-image img {
+            transform: scale(1.08);
+        }
+
+
+        .movie-info {
+            padding: 12px;
+        }
+
+        .movie-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .movie-details {
+            color: #545459;
+        }
+
+
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .tooltip {
+            position: absolute;
+
+            bottom: 130%;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background-color: #333;
+            color: white;
+
+            padding: 6px 10px;
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            white-space: nowrap;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity 0.3s ease;
+        }
+
+
+        .tooltip-container:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+
+        .book-btn {
+            height: 35px;
+            width: 100px;
+
+            margin: 0 12px 12px;
+
+            border: none;
+            border-radius: 5px;
+
+            background-color: #545459;
+            color: white;
+
+            cursor: pointer;
+
+            transition: transform 0.2s ease,
+                        background-color 0.2s ease;
+        }
+
+
+        .book-btn:hover {
+            transform: scale(1.08);
+            background-color: #222;
+        }
+
+
+       
+
+        .notification {
+            position: fixed;
+
+            top: 20px;
+            right: 20px;
+
+            padding: 15px 20px;
+
+            background-color: rgb(16, 183, 16);
+            color: white;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+            animation: notificationSlide 0.5s ease;
+        }
+
+
+        @keyframes notificationSlide {
+
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="cards-container">
+
+
+        <!-- CARD 1 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg&quot;
+                    alt="Mirzapur movie poster">
+
+            </div>
+
+
+            <div class="movie-info">
+
+                <h3 class="movie-title">
+                    Mirzapur: The Movie
+                </h3>
+
+                <div class="tooltip-container">
+
+                    <span class="movie-details">
+                        ⭐ 8.5 | A | Hindi
+                    </span>
+
+                    <span class="tooltip">
+                        Rating based on user reviews
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button class="book-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg&quot;
+                    alt="Hanuman movie poster">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3 class="movie-title">
+                    Hanuman
+                </h3>
+
+                <div class="tooltip-container">
+
+                    <span class="movie-details">
+                        ⭐ 9.0 | U | Hindi
+                    </span>
+
+                    <span class="tooltip">
+                        Rating based on user reviews
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button class="book-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg&quot;
+                    alt="Movie poster">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3 class="movie-title">
+                    Mirzapur
+                </h3>
+
+                <div class="tooltip-container">
+
+                    <span class="movie-details">
+                        ⭐ 8.5 | A | Hindi
+                    </span>
+
+                    <span class="tooltip">
+                        Rating based on user reviews
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button class="book-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg&quot;
+                    alt="Movie poster">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3 class="movie-title">
+                    Mirzapur
+                </h3>
+
+                <div class="tooltip-container">
+
+                    <span class="movie-details">
+                        ⭐ 8.5 | A | Hindi
+                    </span>
+
+                    <span class="tooltip">
+                        Rating based on user reviews
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button class="book-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 5 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg&quot;
+                    alt="Movie poster">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3 class="movie-title">
+                    Mirzapur
+                </h3>
+
+                <div class="tooltip-container">
+
+                    <span class="movie-details">
+                        ⭐ 8.5 | A | Hindi
+                    </span>
+
+                    <span class="tooltip">
+                        Rating based on user reviews
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button class="book-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 6 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg&quot;
+                    alt="Movie poster">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3 class="movie-title">
+                    Mirzapur
+                </h3>
+
+                <div class="tooltip-container">
+
+                    <span class="movie-details">
+                        ⭐ 8.5 | A | Hindi
+                    </span>
+
+                    <span class="tooltip">
+                        Rating based on user reviews
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button class="book-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BOOKING NOTIFICATION -->
+
+    <div class="notification">
+        ✓ Booking Confirmed!
+    </div>
+
+
+</body>
+
+</html>
