@@ -1,0 +1,31 @@
+/* Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f4f4f8; color: #222; }
+header, footer { text-align: center; padding: 1.2rem; background: #2c3e50; color: #fff; }
+
+/* Grid gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+figure { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+img { width: 100%; height: 200px; object-fit: cover; display: block; transition: filter 0.5s ease; }
+figcaption { text-align: center; padding: 0.6rem; font-weight: bold; }
+
+/* One filter per image */
+figure:nth-child(1) img { filter: blur(3px); }
+figure:nth-child(2) img { filter: grayscale(100%); }
+figure:nth-child(3) img { filter: sepia(100%); }
+figure:nth-child(4) img { filter: brightness(1.6); }
+figure:nth-child(5) img { filter: contrast(2); }
+figure:nth-child(6) img { filter: hue-rotate(120deg); }
+
+/* Hover removes filter */
+figure:hover img { filter: none; }
+
+/* Mobile: single column */
+@media (max-width: 599px) {
+  .gallery { grid-template-columns: 1fr; }
+}

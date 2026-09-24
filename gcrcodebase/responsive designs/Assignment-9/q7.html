@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Responsive Demo</title>
+  <link rel="stylesheet" href="q7.css">
+</head>
+<body>
+  <header>
+    <div class="logo">ResponsiveLab</div>
+    <nav><a href="#gallery">Gallery</a><a href="#explain">Explanation</a><a href="#cheat">Cheat Sheet</a></nav>
+  </header>
+
+  <main class="layout">
+    <section id="gallery" class="panel">
+      <h2>Image Gallery</h2>
+      <div class="images">
+        <img src="https://picsum.photos/seed/c1/200/150" alt="Gallery 1">
+        <img src="https://picsum.photos/seed/c2/200/150" alt="Gallery 2">
+        <img src="https://picsum.photos/seed/c3/200/150" alt="Gallery 3">
+        <img src="https://picsum.photos/seed/c4/200/150" alt="Gallery 4">
+      </div>
+    </section>
+
+    <section id="explain" class="panel">
+      <h2>What is Responsive Design?</h2>
+      <p>Responsive design makes a page look good on every screen by using fluid
+         layouts, flexible images, and media queries.</p>
+    </section>
+
+    <section id="cheat" class="panel">
+      <h2>Cheat Sheet Preview</h2>
+      <ul>
+        <li><strong>Filters:</strong> <code>filter: sepia(1);</code></li>
+        <li><strong>Media Query:</strong> <code>@media (max-width: 700px)</code></li>
+        <li><strong>Clamp:</strong> <code>clamp(1rem, 2vw, 2rem)</code></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <address>Contact: hello@example.com | +91 00000 00000</address>
+  </footer>
+</body>
+</html>

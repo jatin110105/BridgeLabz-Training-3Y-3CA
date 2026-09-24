@@ -1,0 +1,27 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Header: logo left, nav right */
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem; background: #1f2a44; color: #fff;
+}
+.logo { font-size: 1.5rem; font-weight: bold; }
+nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; }
+nav a:hover { text-decoration: underline; }
+
+/* Three boxes horizontally */
+main { flex: 1; display: flex; gap: 1.5rem; padding: 2rem; }
+.box {
+  flex: 1; padding: 1.5rem; background: #e8eefc; border-radius: 8px;
+  text-align: center; transition: transform 0.3s ease;
+}
+.box:hover { transform: scale(1.05); }
+
+/* Centered footer */
+footer { display: flex; justify-content: center; padding: 1rem; background: #1f2a44; color: #fff; }
+
+/* Stack below 750px */
+@media (max-width: 750px) {
+  main { flex-direction: column; }
+}
