@@ -1,0 +1,41 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 100;
+}
+.logo { font-size: 1.5rem; }
+.nav-links { list-style: none; display: flex; gap: 24px; }
+.nav-links a { color: #ffffff; text-decoration: none; font-size: 1em; transition: color 0.2s ease; }
+.nav-links a:hover { color: #4ecdc4; }
+main { flex: 1; margin-top: 4rem; padding: 40px 5%; }
+.bio-section { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; padding: 40px 0; }
+.profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #4ecdc4; }
+.bio-text h2 { margin-bottom: 12px; font-size: 2em; }
+.bio-text p { font-size: 1em; line-height: 1.6; max-width: 60ch; }
+#about, #contact { padding: 40px 0; border-top: 1px solid #ddd; }
+#about h2, #contact h2 { margin-bottom: 12px; }
+.site-footer { background-color: #1a1a2e; color: #ffffff; text-align: center; padding: 16px 0; }
+@media (max-width: 600px) {
+  .site-header { flex-direction: column; height: auto; padding: 12px 5%; }
+  main { margin-top: 6rem; }
+  .bio-section { flex-direction: column; text-align: center; }
+}

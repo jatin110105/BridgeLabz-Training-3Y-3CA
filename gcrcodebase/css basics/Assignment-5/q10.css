@@ -1,0 +1,102 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; color: #1a1a2e; }
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(26,26,46,0.95);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5%;
+  outline: 1px solid transparent;
+  z-index: 100;
+}
+.sticky-header nav ul { list-style: none; display: flex; gap: 24px; }
+.sticky-header nav a { color: #ffffff; text-decoration: none; }
+
+.hero {
+  position: relative;
+  height: 60vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/id/90/1200/600');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 60px 8%;
+  border-bottom: 1px solid #ddd;
+}
+.about-text { flex: 1; }
+.about-img { flex: 1; position: relative; }
+.about-img img {
+  width: 100%;
+  border-radius: 8px;
+  border: 4px solid #4ecdc4;
+}
+
+.services {
+  display: flex;
+  gap: 20px;
+  padding: 60px 8%;
+  background-color: #f4f6f8;
+}
+.service-box {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 32px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+}
+
+.contact {
+  padding: 60px 8%;
+  text-align: center;
+}
+.contact form {
+  max-width: 400px;
+  margin: 24px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contact input, .contact textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contact button {
+  padding: 12px;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.site-footer {
+  position: relative;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 700px) {
+  .about { flex-direction: column; }
+  .services { flex-direction: column; }
+}
