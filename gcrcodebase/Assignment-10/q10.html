@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Agency</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q10.css">
+</head>
+<body>
+
+<header class="bg-dark text-white text-center py-4">
+  <h1>WanderLust Travels</h1>
+  <p class="mb-0">Explore the world with us</p>
+</header>
+
+<main>
+  <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="https://placehold.co/1200x500" class="d-block w-100" alt="Paris">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Paris, France</h5>
+          <p>The city of lights awaits you.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="https://placehold.co/1200x500" class="d-block w-100" alt="Bali">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bali, Indonesia</h5>
+          <p>Relax on pristine beaches.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="https://placehold.co/1200x500" class="d-block w-100" alt="Swiss Alps">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Swiss Alps</h5>
+          <p>Adventure among snow capped peaks.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#travelCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#travelCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <div class="container my-5">
+    <h4 class="text-center mb-3">Your Booking Progress</h4>
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%;">70%</div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-1">Contact us: info@wanderlust.com | +91-9876543210</p>
+  <p class="mb-0">&copy; 2026 WanderLust Travels</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

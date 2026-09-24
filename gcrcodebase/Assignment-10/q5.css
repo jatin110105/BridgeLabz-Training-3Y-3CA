@@ -1,0 +1,17 @@
+:root {
+  --bs-primary: #d9534f;
+  --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+body {
+  font-family: var(--bs-font-sans-serif);
+}
+header, footer {
+  background-color: var(--bs-primary);
+}
+.btn {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+.card-title {
+  color: var(--bs-primary);
+}
