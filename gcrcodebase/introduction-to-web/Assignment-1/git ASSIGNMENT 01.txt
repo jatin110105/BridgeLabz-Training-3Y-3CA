@@ -1,0 +1,65 @@
+git  ASSIGNMENT=01
+
+1. Explain the difference between frontend, backend, and full-stack development with
+suitable real-world examples.
+Ans: Frontend: Frontend is the part of a website that users can see and use.
+Example: Buttons, pages, and website design.
+Tools: HTML, CSS, JavaScript.
+Backend: Backend manages server, database, and website logic.
+Example: Login and payment system.
+Tools: Java, Python, Node.js.
+Full-Stack: Full-stack includes both frontend and backend development.
+Example: Complete shopping website.
+
+2. Create a simple diagram showing how the client-server model works in web architecture.
+Ans: Client (Browser)   Request  Server  Response   Client
+
+3. Describe how a browser requests and displays a web page from a web server.
+Ans: 1. User enters a website address.
+2. Browser sends a request to the server.
+3. Server sends website files.
+4. Browser displays the webpage.
+
+4. Identify and list the tools required to set up a web development environment. Explain the purpose of each.
+Ans: VS Code - Used for writing code.
+Browser - Used for testing websites.
+Git - Used to manage code versions.
+GitHub - Used to store code online.
+Node.js - Runs JavaScript applications.
+
+5. Explain what a web server is and give examples of commonly used servers.
+Ans: A web server stores website files and sends them to users.
+Examples: Apache, Nginx, IIS
+
+6. Define the roles of a frontend developer, backend developer, and database administrator in a project.
+Ans: Frontend Developer: Creates website design and user interface.
+Backend Developer: Handles server and application logic.
+Database Administrator: Manages and maintains databases.
+
+7. Install VS Code and configure it for HTML, CSS, and JavaScript development. Take a
+screenshot of the setup.
+Ans: Steps:
+1. Install VS Code.
+2. Add Live Server extension.
+3. Create HTML, CSS, and JavaScript files.
+4. Run and test the website.
+
+8. Explain the difference between static and dynamic websites. Provide an example of
+each.
+Ans:Static Website: Fixed content website.
+Example: Portfolio website.
+Dynamic Website: Content changes based on user activity.
+Example: Amazon.
+
+9. Research and list five web browsers. Explain how rendering engines differ between
+them.
+Ans: 1. Chrome - Blink
+2. Firefox - Gecko
+3. Safari - WebKit
+4. Edge - Blink
+5. Opera – Blink
+
+10. Draw a labeled diagram showing the basic web architecture flow — client, server,
+database, and APIs.
+Ans: Client → API → Server → Database
+Client sends requests, the server processes them, and the database stores information.
