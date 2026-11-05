@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q5 - Image Gallery</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    #gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 700px; }
+    #gallery img { width: 100%; height: 160px; object-fit: cover; cursor: pointer; border-radius: 6px; }
+    #modalOverlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7);
+      justify-content: center; align-items: center;
+    }
+    #modalOverlay.open { display: flex; }
+    #modalContent { background: #fff; padding: 12px; border-radius: 8px; max-width: 90%; }
+    #modalContent img { display: block; max-width: 100%; max-height: 75vh; }
+  </style>
+</head>
+<body>
+  <h2>Image Gallery</h2>
+  <div id="gallery"></div>
+
+  <!-- Modal: overlay (backdrop) + content box -->
+  <div id="modalOverlay">
+    <div id="modalContent">
+      <img id="modalImage" src="" alt="Large preview">
+    </div>
+  </div>
+  <script src="q5_imageGallery.js"></script>
+</body>
+</html>

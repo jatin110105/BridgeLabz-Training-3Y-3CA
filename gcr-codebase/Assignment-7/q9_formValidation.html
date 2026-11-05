@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q9 - Form Submit Blocker</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 400px; margin: 40px auto; }
+    label { display: block; margin-top: 12px; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; }
+    input.invalid { border: 1px solid red; }
+    .error { color: red; font-size: 13px; min-height: 16px; }
+    #successMessage { color: green; font-weight: bold; margin-top: 12px; }
+    button { margin-top: 12px; padding: 8px 16px; }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <!-- novalidate: turn off the browser's built-in popups so OUR inline errors are shown -->
+  <form id="signupForm" novalidate>
+    <label for="nameInput">Name *</label>
+    <input type="text" id="nameInput" name="name">
+    <div class="error" id="nameError"></div>
+
+    <label for="emailInput">Email *</label>
+    <input type="text" id="emailInput" name="email">
+    <div class="error" id="emailError"></div>
+
+    <label for="passwordInput">Password *</label>
+    <input type="password" id="passwordInput" name="password">
+    <div class="error" id="passwordError"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+  <div id="successMessage"></div>
+  <script src="q9_formValidation.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q6 - Table Filter</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; margin-bottom: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f0f0f0; }
+    #noResults { display: none; text-align: center; color: #b00020; }
+  </style>
+</head>
+<body>
+  <h2>Student Table Filter</h2>
+  <input type="text" id="searchBox" placeholder="Search by name, branch or CGPA...">
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Branch</th><th>CGPA</th></tr>
+    </thead>
+    <tbody id="studentBody">
+      <tr><td>Jatin</td><td>CSE</td><td>8.5</td></tr>
+      <tr><td>Aarav Sharma</td><td>ECE</td><td>7.9</td></tr>
+      <tr><td>Mahi Singhal</td><td>CSE</td><td>9.1</td></tr>
+      <tr><td>Karan Kumar</td><td>IT</td><td>8.2</td></tr>
+      <tr><td>Priya Verma</td><td>ME</td><td>7.4</td></tr>
+      <tr><td>Rohan Gupta</td><td>CSE</td><td>8.8</td></tr>
+    </tbody>
+    <tbody>
+      <tr id="noResults"><td colspan="3">No results found</td></tr>
+    </tbody>
+  </table>
+  <script src="q6_tableFilter.js"></script>
+</body>
+</html>
