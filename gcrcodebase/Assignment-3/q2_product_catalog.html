@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Catalog</title>
+</head>
+<body>
+  <h1>Online Store - Product Catalog</h1>
+
+  <!-- Table lists products; rowspan groups products by category, colspan spans the title and note rows -->
+  <table border="1" cellpadding="8">
+    <caption>Our Featured Products</caption>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- rowspan="2": this cell covers two rows -->
+        <td rowspan="2">Electronics</td>
+        <td><img src="images/laptop.svg" alt="Laptop" width="120"></td>
+        <td>Laptop Pro 14</td>
+        <td>14-inch display, 16GB RAM, 512GB SSD</td>
+        <td>Rs. 65,000</td>
+        <td>In Stock</td>
+      </tr>
+      <tr>
+        <td><img src="images/phone.svg" alt="Phone" width="120"></td>
+        <td>Smartphone X</td>
+        <td>6.5-inch AMOLED, 128GB storage</td>
+        <td>Rs. 28,000</td>
+        <td>Limited Stock</td>
+      </tr>
+      <tr>
+        <td>Accessories</td>
+        <td><img src="images/headphones.svg" alt="Headphones" width="120"></td>
+        <td>Wireless Headphones</td>
+        <td>Noise cancelling, 30-hour battery</td>
+        <td>Rs. 3,500</td>
+        <td>Out of Stock</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <!-- colspan="6": this cell covers all six columns -->
+        <td colspan="6">Prices include GST. Availability is updated daily.</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

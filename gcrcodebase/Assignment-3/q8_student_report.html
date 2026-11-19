@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Report</title>
+</head>
+<body>
+  <h1>Sunrise Public School</h1>
+  <p>Student: <strong>Aman Sharma</strong> | Class: 10-A | Roll No: 12</p>
+
+  <table border="1" cellpadding="6">
+    <caption>Annual Examination Marks</caption>
+    <thead>
+      <tr>
+        <th>Term</th>
+        <th>Subject</th>
+        <th title="Marks scored by the student">Marks Obtained</th>
+        <th title="Maximum possible marks">Maximum Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- rowspan="5": the term cell covers all five subject rows -->
+        <td rowspan="5" title="Final yearly exam">Annual</td>
+        <td>English</td><td>82</td><td>100</td>
+      </tr>
+      <tr><td>Mathematics</td><td>91</td><td>100</td></tr>
+      <tr><td>Science</td><td>88</td><td>100</td></tr>
+      <tr><td>Social Studies</td><td>79</td><td>100</td></tr>
+      <tr><td>Hindi</td><td>85</td><td>100</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <!-- colspan="2": label spans the term and subject columns -->
+        <th colspan="2" title="Sum of all subject marks">Total</th>
+        <td>425</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <th colspan="2" title="Total divided by maximum, shown as a percent">Percentage</th>
+        <td colspan="2">85%</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

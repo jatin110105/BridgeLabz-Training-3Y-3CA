@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Database</title>
+</head>
+<body>
+  <h1>Movie Database</h1>
+
+  <table border="1" cellpadding="6">
+    <caption>Top Rated Movies</caption>
+    <thead>
+      <tr>
+        <th>Movie Name</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th title="Rating out of 10 on IMDB">IMDB Rating</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td title="Directed by Christopher Nolan">Inception</td>
+        <td>Sci-Fi</td><td>2010</td><td>8.8</td>
+        <td><a href="https://www.imdb.com" target="_blank">IMDB</a></td>
+      </tr>
+      <tr>
+        <td title="Directed by Christopher Nolan">Interstellar</td>
+        <td>Sci-Fi</td><td>2014</td><td>8.7</td>
+        <td><a href="https://www.imdb.com" target="_blank">IMDB</a></td>
+      </tr>
+      <tr>
+        <td title="Directed by Aamir Khan and Amole Gupte">Taare Zameen Par</td>
+        <td>Drama</td><td>2007</td><td>8.3</td>
+        <td><a href="https://www.imdb.com" target="_blank">IMDB</a></td>
+      </tr>
+      <tr>
+        <!-- colspan="5": one cell across all columns -->
+        <td colspan="5" title="Category note">More movies coming soon...</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><small>Note: Ratings are sample values for this assignment and may differ on IMDB.</small></p>
+</body>
+</html>
