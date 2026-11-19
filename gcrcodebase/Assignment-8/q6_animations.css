@@ -1,0 +1,100 @@
+/* ===== Q6: Animations ===== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #fff;
+}
+
+header, footer { text-align: center; padding: 20px; background: #1e293b; }
+
+/* Centre the stage vertically and horizontally */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+.stage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Fixed-size area where each animation plays, content centred inside */
+.track {
+  width: 220px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 1. Moving box: slides left and right, alternating direction, infinite */
+.moving-box {
+  width: 50px;
+  height: 50px;
+  background: #38bdf8;
+  border-radius: 8px;
+  animation: slide 2s ease-in-out infinite alternate;
+}
+@keyframes slide {
+  from { transform: translateX(-70px); }
+  to   { transform: translateX(70px); }
+}
+
+/* 2. Bouncing ball: delayed start, infinite */
+.ball {
+  width: 40px;
+  height: 40px;
+  background: #fb7185;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out 0.5s infinite alternate;
+}
+@keyframes bounce {
+  from { transform: translateY(40px); }
+  to   { transform: translateY(-40px); }
+}
+
+/* 3. Colour-changing text: runs 5 times, alternating direction */
+.color-text {
+  animation: colorChange 2s ease-in-out 0.3s 5 alternate;
+}
+@keyframes colorChange {
+  0%   { color: #f87171; }
+  50%  { color: #facc15; }
+  100% { color: #4ade80; }
+}
+
+/* 4. Pulsing spinner: scale + rotate, infinite */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #a78bfa;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1.5s ease-in-out 1s infinite alternate-reverse;
+}
+@keyframes spin {
+  from { transform: rotate(0deg) scale(0.8); }
+  to   { transform: rotate(360deg) scale(1.2); }
+}

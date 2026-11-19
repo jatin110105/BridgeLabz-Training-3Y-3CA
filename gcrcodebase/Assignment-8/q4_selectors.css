@@ -1,0 +1,81 @@
+/* ===== Q4: Selectors practice ===== */
+
+/* Element selector: base reset for all elements */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Element selector: page defaults */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Element selector: header and footer share a banner style */
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background: #3b3b98;
+  color: #fff;
+}
+
+main {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Element selector: every section is a white card */
+section {
+  background: #fff;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+h2 { margin-bottom: 10px; color: #3b3b98; }
+
+/* Element selector: all paragraphs */
+p { margin-bottom: 8px; }
+
+/* Class selector: only elements with class="highlight" */
+.highlight {
+  background: #fff3a8;
+  padding: 6px 10px;
+  border-left: 4px solid #f1c40f;
+}
+
+/* ID selector: the single element with id="special" */
+#special {
+  background: #d6f5e3;
+  padding: 6px 10px;
+  border-left: 4px solid #27ae60;
+  font-weight: bold;
+}
+
+/* Attribute selector: links that open in a new tab */
+a[target="_blank"] { color: #c0392b; font-weight: bold; }
+
+/* Attribute selector: links whose href starts with # */
+a[href^="#"] { color: #8e44ad; }
+
+/* Attribute selector: links whose href ends with .pdf */
+a[href$=".pdf"] { color: #16a085; text-decoration: underline wavy; }
+
+.links { list-style: none; }
+.links li { margin-bottom: 6px; }
+
+/* Descendant combinator: any p anywhere inside .box */
+.box p { color: #2c3e50; }
+
+/* Child combinator: only li that are direct children of a ul inside .box */
+.box > ul > li { background: #e0e7ff; padding: 4px 8px; margin: 4px 0; list-style: none; }
+
+/* Adjacent sibling combinator: only the p immediately after an h3 */
+h3 + p { background: #ffe0e0; padding: 4px 8px; font-weight: bold; }
+
+/* General sibling combinator: every p after the h3 (same parent) */
+h3 ~ p { border-left: 4px solid #e74c3c; padding-left: 8px; }
+
+.box { padding: 8px; border: 1px dashed #999; border-radius: 6px; }

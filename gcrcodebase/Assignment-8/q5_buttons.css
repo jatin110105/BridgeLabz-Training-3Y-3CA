@@ -1,0 +1,68 @@
+/* ===== Q5: Button collection ===== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+header, footer { text-align: center; padding: 20px; background: #2c3e50; color: #fff; }
+
+main { padding: 48px 16px; }
+
+/* Flexbox row with consistent spacing between buttons */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.note { text-align: center; margin-top: 32px; color: #444; }
+
+/* Shared button base */
+.btn {
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+/* Active: pressed-in look */
+.btn:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus: clear outline for keyboard users */
+.btn:focus {
+  outline: 3px solid #f39c12;
+  outline-offset: 3px;
+}
+
+/* Primary */
+.btn-primary { background: #2563eb; color: #fff; }
+.btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+/* Secondary */
+.btn-secondary { background: #6b7280; color: #fff; }
+.btn-secondary:hover { background: #4b5563; transform: translateY(-2px); }
+
+/* Outline */
+.btn-outline { background: transparent; color: #2563eb; border-color: #2563eb; box-shadow: none; }
+.btn-outline:hover { background: #2563eb; color: #fff; transform: translateY(-2px); }
+
+/* Disabled: greyed out, no hover/active movement */
+.btn:disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}

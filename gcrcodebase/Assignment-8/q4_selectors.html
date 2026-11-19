@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q4 - CSS Selectors Practice</title>
+  <link rel="stylesheet" href="q4_selectors.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice</h1>
+    <p>Each box below is styled by a different kind of selector.</p>
+  </header>
+
+  <main>
+    <!-- Element selector -->
+    <section>
+      <h2>1. Element selector</h2>
+      <p>Every paragraph gets the same base style.</p>
+    </section>
+
+    <!-- Class selector -->
+    <section>
+      <h2>2. Class selector</h2>
+      <p class="highlight">This paragraph has class "highlight".</p>
+      <p>This one does not.</p>
+    </section>
+
+    <!-- ID selector -->
+    <section>
+      <h2>3. ID selector</h2>
+      <p id="special">This paragraph has the unique ID "special".</p>
+    </section>
+
+    <!-- Attribute selectors -->
+    <section>
+      <h2>4. Attribute selector</h2>
+      <ul class="links">
+        <li><a href="https://example.com" target="_blank">External link (target="_blank")</a></li>
+        <li><a href="#top">Internal link (href starts with #)</a></li>
+        <li><a href="report.pdf">PDF link (href ends with .pdf)</a></li>
+      </ul>
+    </section>
+
+    <!-- Combinators -->
+    <section class="combinators">
+      <h2>5. Combinators</h2>
+      <div class="box">
+        <p>Descendant: p inside .box</p>
+        <p>Second paragraph in .box</p>
+        <ul>
+          <li>Child: li directly inside ul</li>
+          <li>Second item</li>
+        </ul>
+        <h3>Heading after the list</h3>
+        <p>Adjacent sibling: first p right after h3</p>
+        <p>General sibling: any later p after h3</p>
+        <p>Another general sibling p</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 - Question 4</p>
+  </footer>
+</body>
+</html>

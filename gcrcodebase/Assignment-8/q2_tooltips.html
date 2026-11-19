@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2 - CSS Tooltips</title>
+  <link rel="stylesheet" href="q2_tooltips.css">
+</head>
+<body>
+  <header>
+    <h1>Pure CSS Tooltips</h1>
+  </header>
+
+  <main>
+    <section class="tooltip-row">
+
+      <!-- Each .tooltip wraps the trigger and its hidden tooltip text -->
+      <div class="tooltip" tabindex="0">
+        <span class="icon" aria-hidden="true">&#9993;</span> Mail
+        <span class="tooltip-text">Check your inbox</span>
+      </div>
+
+      <div class="tooltip" tabindex="0">
+        <span class="icon" aria-hidden="true">&#9881;</span> Settings
+        <span class="tooltip-text">Change preferences</span>
+      </div>
+
+      <div class="tooltip" tabindex="0">
+        <span class="icon" aria-hidden="true">&#9733;</span> Favourite
+        <span class="tooltip-text">Add to favourites</span>
+      </div>
+
+      <div class="tooltip" tabindex="0">
+        <span class="icon" aria-hidden="true">&#10067;</span> Help
+        <span class="tooltip-text">Need assistance? Click here</span>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Hover (or Tab to) any item to see its tooltip.</p>
+  </footer>
+</body>
+</html>

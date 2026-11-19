@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q10 - Mini UI Layout</title>
+  <link rel="stylesheet" href="q10_mini_ui.css">
+</head>
+<body>
+  <header>
+    <h1>My Mini App</h1>
+    <nav><a href="#">Home</a> <a href="#">About</a> <a href="#">Contact</a></nav>
+  </header>
+
+  <main>
+    <!-- Main card: image + form + buttons -->
+    <section class="card">
+      <img src="images/avatar.svg" alt="User avatar" class="avatar">
+      <h2>Create Profile</h2>
+
+      <form class="form" action="#" method="post">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+        </div>
+
+        <div class="field">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg" rows="3" placeholder="Say something..."></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 - Question 10</p>
+  </footer>
+</body>
+</html>

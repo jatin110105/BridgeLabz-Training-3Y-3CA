@@ -1,0 +1,70 @@
+/* ===== Q3: Image showcase ===== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f5;
+  color: #222;
+}
+
+header, footer { text-align: center; padding: 24px 16px; background: #1f2937; color: #fff; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 32px 16px; }
+
+/* Grid: 3 columns by default */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+figure {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+/* Wrapper hides the overflow of the scaled image and holds the overlay */
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+/* Semi-transparent dark overlay, invisible until hover */
+.img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.img-wrap:hover img { transform: scale(1.1); }
+.img-wrap:hover::after { opacity: 1; }
+
+figcaption {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1000px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Below 700px: stack in one column */
+@media (max-width: 700px) {
+  .gallery { grid-template-columns: 1fr; }
+}

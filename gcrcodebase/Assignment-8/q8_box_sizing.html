@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q8 - Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="q8_box_sizing.css">
+</head>
+<body>
+  <header>
+    <h1>content-box vs border-box</h1>
+    <p>Both boxes have width: 240px, padding: 30px, border: 5px.</p>
+  </header>
+
+  <main>
+    <section class="comparison">
+
+      <article class="column">
+        <div class="box content-box">width: 240px</div>
+        <h2>Default (content-box)</h2>
+        <p>Width applies to the content only. Padding and border are added on top:
+        240 + 30 + 30 + 5 + 5 = <strong>310px</strong> total.</p>
+      </article>
+
+      <article class="column">
+        <div class="box border-box">width: 240px</div>
+        <h2>border-box</h2>
+        <p>Width includes padding and border. The content shrinks to fit:
+        total stays <strong>240px</strong>.</p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 - Question 8</p>
+  </footer>
+</body>
+</html>
